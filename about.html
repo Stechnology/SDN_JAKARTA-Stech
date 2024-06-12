@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Digitf</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+  <!-- prestasi section -->
+
+  <section class="about_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                Prestasi
+              </h2>
+
+            </div>
+
+            <div class="content1">
+              <p>
+                Perjalanan menuju pencapaian juara 2 dalam Musabaqoh Tilawatil Qur'an di tingkat kecamatan Jakarta merupakan
+                  <span class="dots">...</span>
+                  <span class="more-content"> pengalaman yang penuh dengan dedikasi dan kerja keras. Dimulai dengan latihan intensif setiap hari, mengasah kemampuan tajwid dan tartil di bawah bimbingan guru yang berpengalaman. Setiap sesi latihan diisi dengan semangat untuk memperbaiki setiap kesalahan dan memperindah lantunan ayat-ayat suci. Dukungan dari keluarga dan teman-teman sangat membantu dalam membangun kepercayaan diri. Pada hari perlombaan, rasa gugup sempat menghampiri, namun dengan doa dan ketekunan, berhasil menampilkan yang terbaik di hadapan juri. Meskipun hanya meraih juara 2, pengalaman ini memberikan pelajaran berharga tentang arti dari kesungguhan dan keberanian dalam memperjuangkan sesuatu yang mulia.</span>
+              </p>
+              <button style="background-color: red;"><a href="index.html" style="color: white;">Kembali </a></button>
+
+              <button onclick="toggleReadMore()" id="readMoreBtn">Baca Selengkapnya</button>
+          </div>
+
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="images/e(1).jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js">
+  </script>
+  <script type="text/javascript">
+    function toggleReadMore() {
+            var moreContent = document.querySelector('.more-content');
+            var dots = document.querySelector('.dots');
+            var btn = document.getElementById('readMoreBtn');
+
+            if (moreContent.style.display === "none") {
+                moreContent.style.display = "inline";
+                dots.style.display = "none";
+                btn.innerHTML = "Read Less";
+            } else {
+                moreContent.style.display = "none";
+                dots.style.display = "inline";
+                btn.innerHTML = "Baca Selengkapnya";
+            }
+        }
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      navText: [],
+      autoplay: true,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        420: {
+          items: 2
+        },
+        1000: {
+          items: 5
+        }
+      }
+
+    });
+  </script>
+  <script>
+    var nav = $("#navbarSupportedContent");
+    var btn = $(".custom_menu-btn");
+    btn.click
+    btn.click(function (e) {
+
+      e.preventDefault();
+      nav.toggleClass("lg_nav-toggle");
+      document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
+    });
+  </script>
+  <script>
+    $('.carousel').on('slid.bs.carousel', function () {
+      $(".indicator-2 li").removeClass("active");
+      indicators = $(".carousel-indicators li.active").data("slide-to");
+      a = $(".indicator-2").find("[data-slide-to='" + indicators + "']").addClass("active");
+      console.log(indicators);
+
+    })
+  </script>
+
+</body>
+</body>
+
+</html>
